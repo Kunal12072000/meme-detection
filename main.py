@@ -13,23 +13,23 @@ def define_model():
     model = Sequential()
 
     # Convolutional layer with 32 filters, a 3x3 kernel, and ReLU activation
-    model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(224, 224, 3)))
+    model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)))
     # Max pooling layer with 2x2 pool size
     model.add(MaxPooling2D((2, 2)))
 
     # Convolutional layer with 64 filters, a 3x3 kernel, and ReLU activation
-    model.add(Conv2D(128, (3, 3), activation='relu'))
+    model.add(Conv2D(64, (3, 3), activation='relu'))
     # Max pooling layer with 2x2 pool size
     model.add(MaxPooling2D((2, 2)))
 
     # Convolutional layer with 128 filters, a 3x3 kernel, and ReLU activation
-    model.add(Conv2D(256, (3, 3), activation='relu'))
+    model.add(Conv2D(128, (3, 3), activation='relu'))
     # Max pooling layer with 2x2 pool size
     model.add(MaxPooling2D((2, 2)))
-    model.add(Conv2D(512, (3, 3), activation='relu'))
+    model.add(Conv2D(256, (3, 3), activation='relu'))
     model.add(MaxPooling2D((2, 2)))
 
-    model.add(Conv2D(1024, (3, 3), activation='relu'))
+    model.add(Conv2D(512, (3, 3), activation='relu'))
     model.add(MaxPooling2D((2, 2)))
     # Flatten the output before feeding it into the fully connected layers
     model.add(Flatten())
